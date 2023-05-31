@@ -1,0 +1,186 @@
+/*------------------------------ General style for the header ------------------------------*/
+
+header{
+    background-color: #171A2B; 
+	height: 100px;
+	display: flex;
+    justify-content: space-between;
+	align-items: center;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    margin: 0 ;
+    padding-top: 0;
+    z-index: 1;
+    border-bottom: 5px solid #BFA181;
+}
+
+
+/*---------------------------------- Style for the navbar ----------------------------------*/
+
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    margin:  10px auto 10px auto;
+}
+
+
+#navbar ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+#navbar ul li{
+    margin: 0 1% 1% 1%;
+    padding-bottom: 3px;
+}
+
+#navbar ul li a{
+    display: block;
+    min-width: 120px;
+    width: fit-content;
+    min-height: 40px;
+    height: fit-content;
+    padding: 10px;
+    margin: 10px;
+    text-decoration: none;
+	color: #BFA181;
+    font-size: 16px;
+    text-align: center;
+    transition: 0.8s;
+    border-radius: 50px;  
+}
+
+#navbar ul li a:hover{
+    color:#171A2B;
+    font-weight: bold;
+    background-color: #C3C0C0;
+    text-decoration: underline;
+}
+
+#navbar ul li a.active{
+    color:#171A2B;
+    font-weight: bold;
+    background-color: #C3C0C0;
+}
+
+/*The invisible menu icon for responsive bar*/
+.menuBtn{
+    position: absolute;
+    right: 10px;
+    width: 50px;
+    height: 41px;
+    margin: 0px 5px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.8s;
+    border-radius: 50px;
+}
+
+.menuBtn .bar{
+    width: 50%;
+    height: 3px;
+    margin: 3px 5px ;
+    background-color: #BFA181;
+    border-radius: 10px;
+}
+
+.menuBtn:hover{
+    background-color: #C3C0C0;
+}
+
+.menuBtn:hover .bar{
+    background-color: #171A2B;
+}
+
+
+/*It makes the navigation bar responsive to screen's width*/
+@media (max-width: 1300px){
+
+    #navbar ul li{
+        margin: 0 0.2% 0 0px !important;
+    }
+}
+
+
+@media (max-width: 1150px){
+    .menuBtn{
+        display: flex;
+    }
+
+    header.container{
+        flex-direction: column;
+        align-items: flex-start; 
+        padding-top: 0;  
+    }
+
+    #navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #171A2B;
+        padding-top: 90px;
+        margin-top: 100px;
+        border: 2px solid #BFA181;
+
+    }
+
+    #navbar ul{
+        flex-direction: column;
+        align-items: center;        
+    }
+
+    #navbar.active{
+        display: flex;
+    }
+
+    .menuBtn{
+        margin-top: 30px;
+    }
+}
+
+.adminChoices{
+    position: absolute;
+    top: 150px;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+}
+
+.adminChoices .manageBtn{
+    background-color: #171A2B;
+    border: 2px solid #171A2B;
+    border-radius: 5px;
+    margin: 10px 5px ;
+}
+
+.adminChoices .manageBtn:hover{
+    background-color: #b4cff3;
+    color: #171A2B;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+@media (max-height: 450px) {
+
+    header{
+        position: absolute;
+    }
+    
+    #line{
+        position: absolute;
+    }
+    #navbar{
+        min-height: 300%;
+        overflow-y: scroll;
+        border: 2px solid #BFA181;
+    }
+
+    #navbar ul li{
+        margin: auto;
+    }
+}

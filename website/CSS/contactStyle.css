@@ -1,0 +1,153 @@
+
+.contactBox{
+   margin: 50px auto;
+   display: flex;
+   justify-content: center;
+   text-align: start;
+}
+
+@media (max-width: 1000px){
+    .contactBox{
+        display: block;
+        margin: auto;
+    }
+
+    .contactInfo{
+        margin: 15% 30% !important;
+    }
+
+    .formBox{
+        margin: auto !important;
+    }
+}
+
+.contactInfo a{
+    color: #BFA181;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.contactInfo{
+    list-style: none;
+    margin: 2% 5% 2% 2%;
+}
+
+.contactInfo li{
+    font-size: 16px;
+    font-weight: bold;
+    color: #BFA181;
+    vertical-align: middle;
+    margin: 2em 0;
+}
+
+.formBox{
+    border: 2px solid white;
+    border-radius: 10px;
+    min-width: 450px;
+    min-height: 500px;
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+    background-color: white;
+    font-size: 16px;
+}
+
+.formBox h2{
+    font-size: 18px;
+    color: #171A2B;
+    margin-bottom: 15px;
+    border-left: 3px solid #171A2B;
+    padding-left: 5px;
+}
+
+.formBox h3{
+    color: #171A2B;
+    font-style: italic;
+    font-size: 12px;
+    margin-bottom: 35px;
+}
+
+i{
+    font-size: 14px;
+    color: white;
+}
+
+.formBox form {
+    display: grid;
+    grid-template-columns: [col1-start] 20% [col2-start] auto [col2-end];
+    grid-template-rows: [row1-start] auto [row2-start] auto [row3-start] auto [row4-start] 50px [row4-end];
+    grid-gap: 10px;
+    padding: 20px;
+    color: #171A2B;
+}
+
+.formBox form input, .formBox form textarea{
+    font-size: 16px;
+}
+
+.fields{
+    width: 80%;
+    height: 30px;
+    background-color: rgb(226,226,226);
+    border-radius: 5px;
+    border: 2px solid #171A2B;
+    padding-left: 10px; 
+    justify-self: end;
+}
+
+.fields:hover{
+    border:  3px solid #171A2B;
+    background-color: #ebf1f8;
+}
+
+.fields::placeholder{ 
+    color: #171A2B;
+    font-size: 12px;
+    font-weight: bolder; 
+    font-size: 16px;
+}
+
+.formBox #message{
+    height: 150px;
+}
+
+#sendBtn{
+    min-height: 30px;
+    min-width: 80px;
+    width: fit-content;
+    height: fit-content;
+    padding: 1%;
+    grid-column:  2 / 3;
+    grid-row: row4;
+    color: #171A2B;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: rgb(226,226,226);
+    border: 1px solid #171A2B;
+    border-radius: 5px;
+    justify-self: center ;
+}
+
+#sendBtn:hover{
+    background-color: #171A2B;
+    color: white;
+}
+
+@media (max-width: 520px) {
+
+
+    .contactInfo{
+        text-align: center;
+        margin: 0 10% !important;
+    }
+    .formBox{
+        min-width: fit-content;
+    }
+
+    .formBox form{
+        display: block;
+    }
+    
+}
+

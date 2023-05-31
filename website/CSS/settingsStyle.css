@@ -1,0 +1,141 @@
+#settings{
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border: 2px solid #bfa181;
+    border-radius: 50%;
+    z-index: 2;
+    color: #171A2B;
+    font-size: 14px;
+}
+
+#settingsBox{
+    display: none;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    width: fit-content;
+    height: 85%;
+    padding: 2%;
+    border: 3px solid #bfa181;
+    background-color: white;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    text-align: center;
+    color: #171A2B;
+}
+
+#setMenu{
+    display: flex;
+    justify-content: space-between;
+    background-color: none;
+    border-color: none;
+    margin: 5px 5px 15px 5px;
+    padding: 0;
+}
+
+.setButtons{
+    min-width: 30px;
+    width: fit-content;
+    height: 30px;
+    color: #171A2B;
+    font-weight: bold;
+    border: 2px solid #171A2B;
+    border-radius: 5px;
+    padding: 0 5px;
+    margin-bottom: 10px; 
+}
+
+.setButtons:hover{
+    background-color: #171A2B;
+    color: white;
+}
+
+.setButtons:focus{
+    border: 4px solid #171A2B;
+}
+
+#settingsBox h2{
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#settingsBox div:not(#setMenu,.fontSizes){
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 260px;
+    height: fit-content;
+    font-size: 16px;
+    margin: 20px auto;
+    padding: 8px;
+    border: 2px solid #171A2B;
+    border-radius: 5px;
+    background-color:#b4cff3;
+}
+
+.setTitle{
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#setFSize fieldset{
+    display: flex;
+    flex-direction: column;
+    border: none;
+    text-align: center;
+}
+
+.fontSizes{
+   border: none;
+   margin: 10px;
+}
+
+#backColor:focus, #fontColor:focus{
+
+    border: 4px solid #171A2B;
+}
+
+#no16{
+    font-size: 16px;
+}
+
+#no20{
+    font-size: 20px;
+}
+
+#no24{
+    font-size: 24px;
+}
+
+#no28{
+    font-size: 28px;
+}
+
+#no32{
+    font-size: 32px;
+}
+
+#highlight{
+    min-height: 30px;
+    min-width: 80px;
+    height: fit-content;
+    width: fit-content;
+    padding: 1%;
+    margin-top: 10px;
+    color: #171A2B;
+    font-size: 16px;
+    background-color: white;
+    border: 1px solid #171A2B;
+    border-radius: 5px;
+}
+
+#highlight:hover{
+    border: 3px solid #171A2B;
+    font-weight: bold;
+}

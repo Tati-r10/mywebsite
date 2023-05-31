@@ -1,0 +1,802 @@
+/*------------------------------ Style for the whole admin page ------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(226,226,226); 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+	color: #bfa181;
+}
+
+.container{
+    width: 100%;
+    margin:  0px auto 30px auto;
+    padding: 30px;
+    text-align: center;
+}
+
+h1:not(#hfooter){
+    color: #BFA181;
+    font-size: 25px;
+    border-bottom: 3px solid #BFA181;
+    padding: 10px;   
+    margin-bottom: 30px;
+}
+
+.responsiveImg{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.icons{
+    width: 30px;
+    height: 30px;
+}
+
+footer{
+    margin:  100px auto 0 auto !important;
+    text-align: center;
+    color: #171A2B;
+    width: 90%;
+    border-top: 5px solid #171A2B;
+}
+
+#hfooter{
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+#mainContent{
+    position: relative;
+    top: 100px;
+    width: 90%;
+    margin: 100px auto;
+    text-align: center;
+}
+
+#mainContent h1{
+    color: #171A2B;
+    border-bottom: 3px solid #171A2B;
+    margin-bottom: 40px;
+}
+
+#mainContent .container{
+    display: flex;
+    justify-content: center;
+    margin: 50px auto 80px auto;
+    padding: 20px; 
+}
+
+.boxes{
+    min-width: 200px;
+    width: fit-content;
+    height: 250px;
+    border: 2px solid #171A2B;
+    border-radius: 10px;
+    background-color: rgb(220, 240, 252);
+    text-align: center;
+    margin: auto 0.7%;
+}
+
+.boxes h2{
+    color: #171A2B;
+    font-size: 25px ;
+}
+
+.number{
+    margin: auto;
+    color: #171A2B;
+    font-weight: bold;
+    font-size: 80px !important;
+}
+
+.manageTables{
+    width: 100%;
+    color: #171A2B;
+    text-align: left;
+    border-collapse: collapse;
+    border-spacing: 10px;
+    
+}
+
+.manageTables .linerow{
+    border-bottom: 2px solid #171A2B;
+}
+
+.manageTables tr{
+    width: auto;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.manageTables tr th{
+    padding: 10px;
+}
+
+.manageTables tr td{
+    padding: 15px;
+    width: fit-content;
+}
+
+.infoTable{
+    border-collapse: separate;
+    border-spacing: 80px;
+}
+
+.infoTable td{
+    background-color: white;
+    border: 2px solid #171A2B;
+}
+
+.center{
+    text-align: center !important;
+    max-width: 500px;
+}
+
+.manageBtn{
+    min-width: 100px;
+    min-height: 30px;
+    width: fit-content;
+    height: fit-content;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px;
+    margin: auto;
+}
+
+.addBtn{
+    background-color: #165A2A;
+    border: 2px solid #165A2A;
+}
+
+.addBtn:hover, .addBtn:focus{
+    background-color: #D6FFE6;
+    border: 2px solid #165A2A;
+    color: #165A2A;
+}
+
+.delBtn{
+    background-color: #6b0f0f;
+    border: 2px solid #6b0f0f;
+}
+
+.delBtn:hover, .delBtn:focus{
+    background-color: #e9bcbc;
+    border: 2px solid #6b0f0f;
+    color: #6b0f0f;
+}
+
+#alertMsg{
+    display: none;
+    position: fixed;
+    top: 30%;
+    left: 30%;
+    margin: auto;
+    padding: 50px;
+    width: 40%;
+    min-height: 100px;
+    height: fit-content;
+    background-color: white;
+    color:  #171A2B;
+    font-size: 16px;
+    border: 5px solid #BFA181;
+    border-radius: 5px;
+    z-index: 1;
+    text-align: center;
+}
+
+#msg{
+    margin: 20px auto;
+}
+
+button{
+    min-height: 30px;
+    min-width: 80px;
+    height: fit-content;
+    width: fit-content;
+    grid-column: 2/3;
+    padding: 1%;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: #171A2B;
+    border: 1px solid #171A2B;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: white;
+    color: #171A2B;
+}
+
+.noResults{
+    color: #171A2B;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.resimg{
+    width: 20%;
+    height: 20%;
+    transition: 0.5s;
+}
+
+.resimg:hover{
+    width: 35%;
+    height: 35%;
+}
+
+.addTables{
+    width: 100%;
+    display: grid;
+    grid-template-columns: [col1-start] auto [col2-start] auto [col2-end] ;
+    grid-gap: 30px;
+    justify-content: center;
+    text-align: left;
+    color: #171A2B;
+    font-weight: bold;
+}
+
+.addTables .inputStyle:not(#image,#logo){
+    padding: 5px;
+    color: #171A2B;
+    font-size: 16px;
+    border: 2px solid #171A2B;
+}
+
+.inputStyle::placeholder, textarea::placeholder{ 
+    color: #171A2B;
+    font-size: 12px;
+    font-weight: lighter; 
+    font-size: 16px;
+}
+
+.addTables button{
+    grid-column: 2;
+}
+
+/*Style for input image fields*/
+#image, #logo{ 
+    color: #171A2B;
+    font-size: 16px;
+}
+
+/*-------------------- Style for addTables for width screen smaller than 700px --------------------*/
+
+@media (max-width: 700px){
+
+    .addTables{
+
+        display: block ;
+
+    }
+
+    .addTables *{
+        display: block;
+        margin: 10%;
+    }
+}
+
+
+
+/*------------------------------ Style for homeAdmin.php ------------------------------*/
+
+/*If the width of user's screen is so small that maybe lose content, it displays it in a different way*/
+@media (max-width: 1024px){
+    
+    .dashboard{
+        flex-direction: column;
+    }
+
+    .boxes{
+        margin: 30px auto;
+    }
+}
+
+.smallInfoTable{
+    display: none;
+    color: #171A2B;
+}
+
+.smallInfoTable th{
+    padding: 15px;
+}
+
+.smallInfoTable td{
+    padding: 10px;
+    background-color: white;
+    border: 2px solid #171A2B;
+}
+
+.smallInfoTable .empty{
+    height: 50px;
+}
+
+@media (max-width: 500px){
+
+    .infoTable{
+        display: none;
+    }
+
+    .smallInfoTable{
+        display: block;
+    }
+}
+
+/*------------------------------ Style for addInfo.php ------------------------------*/
+#abstract{
+    min-height: 100px ;
+}
+
+
+/*------------------------------ Style for ManageAdmin.php ------------------------------*/
+
+/*If the width of user's screen is so small that maybe lose content, it displays it in a different way*/
+.adminBoxes{
+    display: none;
+    margin: 0;
+    padding: 10px;
+    color: #171A2B;
+}
+
+.adminBoxes hr{
+    border: 2px solid #171A2B;
+}
+
+.adminBoxes > .delBtn{
+    margin: 20px;
+}
+
+@media (max-width: 1000px){
+    
+    .adminTable{
+        display:none;
+    }
+
+    .adminBoxes{
+        display: block;
+    }
+
+    .adminBox{
+        display: block;
+        margin: 100px;
+        text-align: left;
+    }
+
+    .adminBox td{
+        padding: 20px;
+    }
+
+    .adminBox2{
+        display: none;
+    } 
+}
+
+@media (max-width:450px){
+    .adminTable{
+        display:none;
+    }
+
+    .adminBoxes{
+        display: block;
+    }
+
+    .adminBox{
+        display: none;
+    }
+
+    .adminBox2{
+        display: block;
+        margin: 100px;
+        text-align: left;
+    }
+
+    .adminBox2 .empty{
+        height: 40px;
+    }
+    
+}
+
+/*------------------------------ Style for ManageCategory.php ------------------------------*/
+
+/*If the width of user's screen is so small that maybe lose content, it displays it in a different way*/
+.categoryBoxes{
+    display: none;
+    margin: 0;
+    padding: 10px;
+    color: #171A2B;
+}
+
+.categoryBoxes hr{
+    border: 2px solid #171A2B;
+}
+
+.categoryBoxes > .delBtn{
+    margin: 20px;
+}
+
+@media (max-width: 700px){
+    
+    .categoryTable{
+        display:none;
+    }
+
+    .categoryBoxes{
+        display: block;
+    }
+
+    .catBox{
+        display: block;
+        margin: 50px;
+        text-align: left;
+    }
+
+    .catBox td{
+        padding: 20px;
+    }
+
+    .catBox2{
+        display: none;
+    } 
+}
+
+@media (max-width:450px){
+    .categoryTable{
+        display:none;
+    }
+
+    .categoryBoxes{
+        display: block;
+    }
+
+    .catBox{
+        display: none;
+    }
+
+    .catBox2{
+        display: block;
+        margin: 50px;
+        text-align: left;
+    }
+
+    .catBox2 td{
+        padding-top: 30px;
+    }
+
+    .catBox2 .empty{
+        height: 40px;
+    }
+}
+
+/*------------------------------ Style for ManageProduct.php ------------------------------*/
+
+/*If the width of user's screen is so small that maybe lose content, it displays it in a different way*/
+.productBoxes{
+    display: none;
+    margin: 0;
+    padding: 10px;
+    color: #171A2B;
+}
+
+.productBoxes hr{
+    border: 2px solid #171A2B;
+}
+
+.productBoxes > .delBtn{
+    margin: 20px;
+}
+
+@media (max-width: 700px){
+    
+    .productTable{
+        display:none;
+    }
+
+    .productBoxes{
+        display: block;
+    }
+
+    .proBox{
+        display: block;
+        margin: 50px;
+        text-align: left;
+    }
+
+    .proBox td{
+        padding: 20px;
+    }
+
+    .proBox2{
+        display: none;
+    } 
+
+    .resimg{
+        width: 100px;
+        height: 100px;
+    }
+
+    .resimg:hover{
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width:450px){
+    .productTable{
+        display:none;
+    }
+
+    .productBoxes{
+        display: block;
+    }
+
+    .proBox{
+        display: none;
+    }
+
+    .proBox2{
+        display: block;
+        margin: 50px;
+        text-align: left;
+    }
+
+    .proBox2 td{
+        padding-top: 30px;
+    }
+
+    .resimg{
+        width: 50px;
+        height: 50px;
+    }
+
+    .resimg:hover{
+        width: 100px;
+        height: 100px;
+    }
+
+    .proBox2 .empty{
+        height: 40px;
+    }
+}
+
+/*------------------------------ Style for ManageCustomer.php ------------------------------*/
+
+/*If the width of user's screen is so small that maybe lose content, it displays it in a different way*/
+.customerBoxes{
+    display: none;
+    margin: 0;
+    padding: 10px;
+    color: #171A2B;
+}
+
+.customerBoxes hr{
+    border: 2px solid #171A2B;
+}
+
+.customerBoxes > .delBtn{
+    margin: 20px;
+}
+
+@media (max-width: 1000px){
+    
+    .customerTable{
+        display:none;
+    }
+
+    .customerBoxes{
+        display: block;
+    }
+
+    .custBox{
+        display: block;
+        margin: 50px;
+        text-align: left;
+    }
+
+    .custBox td{
+        padding: 10px;
+    }
+
+    .custBox2{
+        display: none;
+    } 
+}
+
+@media (max-width:450px){
+    .customerTable{
+        display:none;
+    }
+
+    .customerBoxes{
+        display: block;
+    }
+
+    .custBox{
+        display: none;
+    }
+
+    .custBox2{
+        display: block;
+        margin: 50px;
+        text-align: left;
+    }
+
+    .custBox2 td{
+        padding: 10px;
+    }
+
+    .custBox2 .empty{
+        height: 30px;
+    }
+    
+}
+
+/*------------------------------ Style for ManageProduct.php ------------------------------*/
+
+/*If the width of user's screen is so small that maybe lose content, it displays it in a different way*/
+.productBoxes{
+    display: none;
+    margin: 0;
+    padding: 10px;
+    color: #171A2B;
+}
+
+.productBoxes hr{
+    border: 2px solid #171A2B;
+}
+
+.productBoxes > .delBtn{
+    margin: 20px;
+}
+
+@media (max-width: 700px){
+    
+    .productTable{
+        display:none;
+    }
+
+    .productBoxes{
+        display: block;
+    }
+
+    .proBox{
+        display: block;
+        margin: 50px;
+        text-align: left;
+    }
+
+    .proBox td{
+        padding: 20px;
+    }
+
+    .proBox2{
+        display: none;
+    } 
+
+    .resimg{
+        width: 100px;
+        height: 100px;
+    }
+
+    .resimg:hover{
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width:450px){
+    .productTable{
+        display:none;
+    }
+
+    .productBoxes{
+        display: block;
+    }
+
+    .proBox{
+        display: none;
+    }
+
+    .proBox2{
+        display: block;
+        margin: 50px;
+        text-align: left;
+    }
+
+    .proBox2 td{
+        padding-top: 30px;
+    }
+
+    .resimg{
+        width: 50px;
+        height: 50px;
+    }
+
+    .resimg:hover{
+        width: 100px;
+        height: 100px;
+    }
+
+    .proBox2 .empty{
+        height: 40px;
+    }
+}
+
+/*------------------------------ Style for ManageMessage.php ------------------------------*/
+
+/*If the width of user's screen is so small that maybe lose content, it displays it in a different way*/
+.msgBoxes{
+    display: none;
+    margin: 0;
+    padding: 10px;
+    color: #171A2B;
+}
+
+.msgBoxes hr{
+    border: 2px solid #171A2B;
+}
+
+.msgBoxes > .delBtn{
+    margin: 20px;
+}
+
+@media (max-width: 1500px){
+    
+    .msgTable{
+        display:none;
+    }
+
+    .msgBoxes{
+        display: block;
+    }
+
+    .msgBox{
+        display: block;
+        margin: 50px;
+        text-align: left;
+    }
+
+    .msgBox td{
+        padding: 10px;
+    }
+
+    .msgBox2{
+        display: none;
+    } 
+}
+
+@media (max-width:700px){
+    .msgTable{
+        display:none;
+    }
+
+    .msgBoxes{
+        display: block;
+    }
+
+    .msgBox{
+        display: none;
+    }
+
+    .msgBox2{
+        display: block;
+        margin: 50px;
+        text-align: left;
+    }
+
+    .msgBox2 td{
+        padding: 10px;
+    }
+
+    .msgBox2 .empty{
+        height: 30px;
+    }
+    
+}

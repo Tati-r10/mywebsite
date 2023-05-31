@@ -1,0 +1,77 @@
+/*Style for the product's category section*/
+#categories .container{
+    display: block;
+    color: #BFA181;
+    margin-top: 140px;
+}
+
+#categories .container .boxes{
+    display: flex;
+    margin: 80px auto;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+@media (max-width: 1000px){
+
+    #categories .container .boxes{
+        display: block;
+        margin: auto;
+    }
+
+    .boxes a {
+        margin: 50px auto;
+    }
+}
+
+#categories div{
+    display: flex;
+}
+
+.boxCategory{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    border: none;
+    border-radius: 15%;
+    color: white;
+    min-width: 300px;
+    min-height: 350px;
+    width: fit-content;
+    height: fit-content;
+    margin: 20px 50px;
+    padding: 5px;
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+    background-color: white;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-image: url(../images/product.png); 
+    text-decoration: none;
+    transition: 0.8s;
+}
+
+.boxCategory:hover{
+    width: 320px;
+    height: 370px;
+    border: 7px solid #BFA181;
+}
+
+.boxCategory h2{
+   position: relative;
+   bottom: 10px;
+   background-color: rgb(23, 26, 43, 0.9);
+   padding: 2%;
+   border-radius: 5px;
+
+   width: 90%;
+}
+
+.categoryIcon{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+

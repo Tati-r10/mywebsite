@@ -1,0 +1,213 @@
+/*------------------------------ Style for the whole page ------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5em;
+    letter-spacing: 0.12em;
+    word-spacing: 0.16em;
+}
+
+p{
+    margin-bottom: 2em;
+}
+
+body{
+    background-color: #171A2B; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+	color: #bfa181;
+}
+
+.container{
+    width: 100%;
+    margin:  0 auto 30px auto;
+    padding: 30px;
+    text-align: center;
+}
+
+h1{
+    display: inline;
+    color: #BFA181;
+    font-size: 25px;
+    border-bottom: 3px solid #BFA181;
+    padding: 10px;   
+    margin-bottom: 30px;
+}
+
+.responsiveImg{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.icons{
+    width: 30px;
+    height: 30px;
+}
+
+footer{
+    text-align: center;
+}
+
+.hfooter{
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+#alertMsg{
+    display: none;
+    position: fixed;
+    top: 30%;
+    left: 30%;
+    margin: auto;
+    padding: 50px;
+    width: 40%;
+    min-height: 100px;
+    height: fit-content;
+    background-color: white;
+    color:  #171A2B;
+    border: 5px solid #BFA181;
+    border-radius: 5px;
+    z-index: 1;
+    text-align: center;
+}
+
+#msg{
+    margin: 20px auto;
+}
+
+/*------------------------------ Style for the thankYou page page------------------------------*/
+.thankYouBox{
+    border: 5px solid #BFA181;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    padding: 5%;
+    margin: 200px auto;  
+    background-color: rgb(226,226,226);
+    color:#171A2B;
+}
+
+.thankYouBox h1{
+    color:#171A2B;
+    border: none;
+}
+
+/*------------------------------ Style for the logIn page ------------------------------*/
+
+#adminLogin{
+    margin: 50px auto 30px auto;
+}
+
+.logInBox , .signUpBox{
+    border: 5px solid #BFA181;
+    min-width: 500px;
+    min-height: 500px;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    padding: 50px;
+    margin: auto; 
+    margin-top: 200px;
+    margin-bottom: 150px; 
+    background-color: rgb(226,226,226);
+    color:#171A2B;
+}
+
+.logInBox h1, .signUpBox h1{
+    color:#171A2B;
+    border-bottom: 3px solid #171A2B;
+    margin-bottom: 20px;
+}
+
+.logInBox > form, .signUpBox > form{
+    display: grid;
+    grid-template-columns: [col1-start] auto [col2-start] auto [col2-end];
+    grid-template-rows: [row1-start] auto [row2-start] auto [row3-start] auto [row4-start] auto [row4-end];
+    grid-gap: 50px;
+    margin: 50px 0;
+}
+
+.logInBox div{
+    color:#171A2B;
+    font-weight: lighter;
+    font-size: 12px;
+    margin: 20px 0;
+}
+
+#signUp{
+    color:#171A2B;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+#signUp:hover{
+    cursor: pointer;
+}
+
+button:not(#highlight){
+    min-height: 30px;
+    min-width: 80px;
+    height: fit-content;
+    width: fit-content;
+    grid-column: 2/3;
+    padding: 1%;
+    color: #171A2B;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: rgb(226,226,226);
+    border: 1px solid #171A2B;
+    border-radius: 5px;
+}
+
+
+button:not(#highlight):hover{
+    background-color: #171A2B;
+    color: white;
+}
+
+/*------------------------------ Style for the log out page ------------------------------*/
+
+#outFormBox{
+    border: 5px solid #BFA181;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    padding: 5%;
+    margin: 200px 20%;  
+    background-color: rgb(226,226,226);
+    color:#171A2B;
+}
+
+#outFormBox h1{
+    color:#171A2B;
+    border: none;
+    text-decoration: underline;
+}
+
+
+#logOutBox{
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+#logOutBox h2{
+    margin: 50px auto;
+
+}
+
+@media (max-width: 320px) {
+    footer nav{
+        display: flex;
+        flex-direction: column;
+        margin: 2em !important;
+    }
+
+    footer nav a{
+        margin: 1.5em !important;
+    }
+    
+}
